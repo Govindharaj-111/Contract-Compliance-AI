@@ -66,3 +66,34 @@ export const PolicyConflictAnalysisResultSchema = z.object({
 
 export type ExtractedConflict = z.infer<typeof ExtractedConflictSchema>;
 export type PolicyConflictAnalysisResult = z.infer<typeof PolicyConflictAnalysisResultSchema>;
+
+/**
+ * Zod schema for individual contract deadline extracted by LLM (Stage 6).
+ */
+export const ExtractedDeadlineSchema = z.object({
+  title: z.string().min(1, 'Deadline title is required'),
+  description: z.string().nullable().optional().default(null),
+  dueDate: z.string().nullable().optional().default(null),
+  deadlineText: z.string().nullable().optional().default(null),
+  noticeDays: z.number().int().nonnegative().default(30),
+  noticePeriodText: z.string().nullable().optional().default(null),
+  responsibleParty: z.string().nullable().optional().default(null),
+  category: z.string().default('Deadline'),
+  severity: z.enum(['LOW', 'MEDIUM', 'HIGH', 'CRITICAL']).default('MEDIUM'),
+  confidence: z.number().min(0).max(1).default(0.85),
+  clauseNumber: z.string().nullable().optional().default(null),
+  pageNumber: z.number().int().positive().nullable().optional().default(null),
+  evidence: z.string().min(1, 'Supporting evidence snippet is required'),
+  status: z.enum(['UPCOMING', 'DUE_SOON', 'OVERDUE', 'COMPLETED', 'EXPIRED', 'NEEDS_REVIEW']).default('UPCOMING'),
+  obligationId: z.string().nullable().optional().default(null),
+});
+
+/**
+ * Zod schema for deadline extraction result.
+ */
+export const DeadlineExtractionResultSchema = z.object({
+  deadlines: z.array(ExtractedDeadlineSchema).default([]),
+});
+
+export type ExtractedDeadline = z.infer<typeof ExtractedDeadlineSchema>;
+export type DeadlineExtractionResult = z.infer<typeof DeadlineExtractionResultSchema>;

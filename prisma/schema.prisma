@@ -74,10 +74,21 @@ model Deadline {
   obligationId    String?
   obligation      Obligation?   @relation(fields: [obligationId], references: [id], onDelete: SetNull)
   title           String
-  dueDate         DateTime
+  description     String?
+  dueDate         DateTime?
+  deadlineText    String?
   noticeDays      Int           @default(30)
+  noticePeriodText String?
+  responsibleParty String?
+  status          String        @default("UPCOMING") // UPCOMING, DUE_SOON, OVERDUE, COMPLETED, EXPIRED, NEEDS_REVIEW
+  severity        String        @default("MEDIUM")   // LOW, MEDIUM, HIGH, CRITICAL
+  confidence      Float?        @default(1.0)
+  pageNumber      Int?
+  clauseNumber    String?
+  evidenceText    String?
   isAlertSent     Boolean       @default(false)
   createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt @default(now())
 }
 
 model Party {

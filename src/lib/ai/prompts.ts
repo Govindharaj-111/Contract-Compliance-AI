@@ -101,3 +101,47 @@ JSON OUTPUT STRUCTURE REQUIREMENT:
 If no conflicts exist between the contract requirements and the corporate policies, return {"conflicts": []}.
 Respond strictly with valid JSON.
 `;
+
+export const DEADLINE_EXTRACTION_SYSTEM_PROMPT = `
+You are an expert Legal & Contract Deadline Extraction AI.
+Your task is to identify and extract all contract deadlines, notice periods, renewal dates, expiration dates, and recurring compliance milestones from contract text.
+
+STRICT STAGE 6 DEADLINE EXTRACTION RULES:
+1. NEVER invent dates, notice periods, responsible parties, contract clauses, or evidence.
+2. If a deadline date cannot be reliably determined (e.g. relative, conditional, or vague language), set dueDate to null and status to "NEEDS_REVIEW".
+3. Extract responsible party explicitly stated in the text. If uncertain, set responsibleParty to "NEEDS_REVIEW".
+4. Determine noticeDays integer (e.g. 60 for "60 days prior notice").
+5. Assign status strictly as one of: "UPCOMING", "DUE_SOON", "OVERDUE", "EXPIRED", "COMPLETED", "NEEDS_REVIEW".
+6. Output ONLY valid JSON matching the requested schema.
+`;
+
+export const DEADLINE_EXTRACTION_PROMPT_TEMPLATE = (contractContent: string) => `
+Analyze the contract text below and extract all contract deadlines, notice periods, renewal windows, expiration dates, and recurring compliance milestones.
+
+JSON OUTPUT STRUCTURE REQUIREMENT:
+{
+  "deadlines": [
+    {
+      "title": "Clear concise deadline summary (e.g., Non-Renewal Written Notice Window)",
+      "description": "Full description of the requirement or milestone",
+      "dueDate": "YYYY-MM-DD" | null, // ISO date string if fixed date, else null
+      "deadlineText": "Original deadline phrase from text (e.g. 'at least 60 days prior to annual renewal')",
+      "noticeDays": 60, // Number of advance notice days required
+      "noticePeriodText": "Notice period text (e.g. '60 days prior written notice') or null",
+      "responsibleParty": "Supplier" | "Client" | "Vendor" | "NEEDS_REVIEW",
+      "category": "Renewal" | "Expiration" | "Notice" | "SLA" | "Compliance" | "Milestone",
+      "severity": "CRITICAL" | "HIGH" | "MEDIUM" | "LOW",
+      "confidence": 0.88, // Number between 0.0 and 1.0
+      "clauseNumber": "Section 8.2" | null,
+      "pageNumber": 1 | null,
+      "evidence": "Verbatim sentence or paragraph from contract text",
+      "status": "UPCOMING" | "DUE_SOON" | "OVERDUE" | "EXPIRED" | "COMPLETED" | "NEEDS_REVIEW"
+    }
+  ]
+}
+
+CONTRACT TEXT:
+${contractContent}
+
+Respond strictly with valid JSON.
+`;

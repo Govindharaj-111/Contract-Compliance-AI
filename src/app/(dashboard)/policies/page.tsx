@@ -55,7 +55,6 @@ export default function PoliciesPage() {
 
   const fetchPolicies = useCallback(async () => {
     try {
-      setLoading(true);
       setError(null);
       const res = await fetch('/api/policies');
       const json = await res.json();
@@ -73,7 +72,16 @@ export default function PoliciesPage() {
   }, []);
 
   useEffect(() => {
-    fetchPolicies();
+    let isMounted = true;
+    async function load() {
+      if (isMounted) {
+        await fetchPolicies();
+      }
+    }
+    load();
+    return () => {
+      isMounted = false;
+    };
   }, [fetchPolicies]);
 
   const handleCreatePolicy = async (e: React.FormEvent) => {

@@ -31,6 +31,9 @@ interface DashboardStats {
   activeObligations: number;
   upcomingDeadlines: number;
   complianceConflicts: number;
+  dueSoon: number;
+  overdue: number;
+  criticalDeadlines: number;
 }
 
 export default function DashboardPage() {
@@ -39,6 +42,9 @@ export default function DashboardPage() {
     activeObligations: 0,
     upcomingDeadlines: 0,
     complianceConflicts: 0,
+    dueSoon: 0,
+    overdue: 0,
+    criticalDeadlines: 0,
   });
 
   const [recentContracts, setRecentContracts] = useState<Contract[]>([]);
@@ -57,11 +63,10 @@ export default function DashboardPage() {
 
   const fetchDashboardData = useCallback(async () => {
     try {
-      setLoading(true);
       const [contractsRes, obRes, deadRes, confRes] = await Promise.all([
         fetch('/api/contracts').then((r) => r.json()).catch(() => ({ success: false, data: [] })),
         fetch('/api/obligations').then((r) => r.json()).catch(() => ({ success: false, data: [] })),
-        fetch('/api/deadlines').then((r) => r.json()).catch(() => ({ success: false, data: [] })),
+        fetch('/api/deadlines').then((r) => r.json()).catch(() => ({ success: false, data: [], stats: {} })),
         fetch('/api/conflicts').then((r) => r.json()).catch(() => ({ success: false, data: [] })),
       ]);
 
@@ -69,6 +74,7 @@ export default function DashboardPage() {
       const obligationsList = obRes.success ? obRes.data : [];
       const deadlinesList: Deadline[] = deadRes.success ? deadRes.data : [];
       const conflictsList = confRes.success ? confRes.data : [];
+      const deadStats = deadRes.stats || {};
 
       setRecentContracts(contractsList.slice(0, 5));
       setUpcomingDeadlines(deadlinesList.slice(0, 5));
@@ -78,6 +84,9 @@ export default function DashboardPage() {
         activeObligations: Array.isArray(obligationsList) ? obligationsList.length : 0,
         upcomingDeadlines: Array.isArray(deadlinesList) ? deadlinesList.length : 0,
         complianceConflicts: Array.isArray(conflictsList) ? conflictsList.length : 0,
+        dueSoon: deadStats.dueSoon || 0,
+        overdue: deadStats.overdue || 0,
+        criticalDeadlines: deadStats.criticalCount || 0,
       });
     } catch (err) {
       console.error('Error loading dashboard stats:', err);
@@ -87,7 +96,16 @@ export default function DashboardPage() {
   }, []);
 
   useEffect(() => {
-    fetchDashboardData();
+    let isMounted = true;
+    async function load() {
+      if (isMounted) {
+        await fetchDashboardData();
+      }
+    }
+    load();
+    return () => {
+      isMounted = false;
+    };
   }, [fetchDashboardData]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -373,12 +391,14 @@ export default function DashboardPage() {
                   </TableRow>
                 ) : (
                   upcomingDeadlines.map((d) => (
-                    <TableRow key={d.id} className="hover:bg-slate-800/40">
+                    <TableRow key={d.id} className="hover:bg-slate-800/40 cursor-pointer">
                       <TableCell className="font-medium text-slate-100 text-xs">
-                        {d.title}
+                        <Link href={`/deadlines/${d.id}`} className="hover:text-indigo-400">
+                          {d.title}
+                        </Link>
                       </TableCell>
                       <TableCell className="text-xs text-amber-300 font-mono">
-                        {new Date(d.dueDate).toLocaleDateString()}
+                        {d.dueDate ? new Date(d.dueDate).toLocaleDateString() : 'NEEDS_REVIEW'}
                       </TableCell>
                       <TableCell className="text-xs text-slate-400">
                         {d.noticeDays} Days Notice

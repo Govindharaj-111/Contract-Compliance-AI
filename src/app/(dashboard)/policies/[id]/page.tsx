@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, use } from 'react';
+import React, { useEffect, useState, use, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { PageHeader } from '@/components/shared/page-header';
@@ -20,7 +20,6 @@ import {
   Trash2,
   AlertTriangle,
   FileText,
-  CheckCircle2,
   Loader2,
   Scale,
 } from 'lucide-react';
@@ -54,9 +53,8 @@ export default function PolicyDetailPage({
   const [formVersion, setFormVersion] = useState('');
   const [formContent, setFormContent] = useState('');
 
-  const fetchPolicy = async () => {
+  const fetchPolicy = useCallback(async () => {
     try {
-      setLoading(true);
       const res = await fetch(`/api/policies/${resolvedParams.id}`);
       const json = await res.json();
       if (json.success && json.data) {
@@ -75,11 +73,20 @@ export default function PolicyDetailPage({
     } finally {
       setLoading(false);
     }
-  };
+  }, [resolvedParams.id]);
 
   useEffect(() => {
-    fetchPolicy();
-  }, [resolvedParams.id]);
+    let isMounted = true;
+    async function load() {
+      if (isMounted) {
+        await fetchPolicy();
+      }
+    }
+    load();
+    return () => {
+      isMounted = false;
+    };
+  }, [fetchPolicy]);
 
   const handleUpdatePolicy = async (e: React.FormEvent) => {
     e.preventDefault();

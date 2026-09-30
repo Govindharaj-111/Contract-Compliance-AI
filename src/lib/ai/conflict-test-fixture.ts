@@ -206,13 +206,13 @@ export async function runStep5DeterministicTests() {
   console.log(`✔ Test 1 Passed: Clear conflict detected (Severity: ${test1.conflicts[0].severity}, Both Evidence Snippets Preserved).`);
 
   const test2 = testNonConflictingCase();
-  console.log(`✔ Test 2 Passed: Non-conflicting clause produced 0 false positive conflicts.`);
+  console.log(`✔ Test 2 Passed: Non-conflicting clause produced ${test2.conflicts.length} false positive conflicts.`);
 
   const test3 = testAmbiguousNeedsReviewCase();
   console.log(`✔ Test 3 Passed: Ambiguous clause correctly classified with Status: "${test3.conflicts[0].status}".`);
 
   const test4 = testInvalidOutputRejection();
-  console.log(`✔ Test 4 Passed: Invalid AI response correctly rejected by Zod schema validation.`);
+  console.log(`✔ Test 4 Passed: Invalid AI response correctly rejected by Zod schema validation (Result: ${test4}).`);
 
   console.log(`✔ Test 5 Check: AI Client isConfigured() evaluated to: ${aiClient.isConfigured()}`);
 

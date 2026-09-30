@@ -58,7 +58,6 @@ export default function ConflictsPage() {
 
   const fetchConflicts = useCallback(async () => {
     try {
-      setLoading(true);
       const params = new URLSearchParams();
       if (severityFilter !== 'ALL') params.set('severity', severityFilter);
       if (statusFilter !== 'ALL') params.set('status', statusFilter);
@@ -81,7 +80,16 @@ export default function ConflictsPage() {
   }, [severityFilter, statusFilter, searchQuery]);
 
   useEffect(() => {
-    fetchConflicts();
+    let isMounted = true;
+    async function load() {
+      if (isMounted) {
+        await fetchConflicts();
+      }
+    }
+    load();
+    return () => {
+      isMounted = false;
+    };
   }, [fetchConflicts]);
 
   const handleRunConflictDetection = async () => {

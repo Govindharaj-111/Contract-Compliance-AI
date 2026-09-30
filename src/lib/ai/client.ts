@@ -5,12 +5,17 @@ import {
   PolicyConflictAnalysisResultSchema,
   PolicyConflictAnalysisResult,
   ExtractedConflict,
+  DeadlineExtractionResultSchema,
+  DeadlineExtractionResult,
+  ExtractedDeadline,
 } from './schema';
 import {
   CONTRACT_ANALYSIS_SYSTEM_PROMPT,
   OBLIGATION_EXTRACTION_PROMPT_TEMPLATE,
   POLICY_COMPARISON_SYSTEM_PROMPT,
   CONFLICT_DETECTION_PROMPT_TEMPLATE,
+  DEADLINE_EXTRACTION_SYSTEM_PROMPT,
+  DEADLINE_EXTRACTION_PROMPT_TEMPLATE,
 } from './prompts';
 
 export interface LLMConfig {
@@ -273,6 +278,167 @@ export class AIClient {
 
     const rawOutput = await this.completePrompt(prompt, POLICY_COMPARISON_SYSTEM_PROMPT);
     return this.parseAndValidateConflictResponse(rawOutput, policies, contractInput);
+  }
+
+  /**
+   * Primary method for Stage 6: Extract deadlines and notice periods from contract text / pages.
+   */
+  public async extractContractDeadlines(
+    pages: AnalysisPageInput[] | string
+  ): Promise<DeadlineExtractionResult> {
+    let formattedText = '';
+    if (Array.isArray(pages)) {
+      formattedText = pages
+        .map((p) => `--- PAGE ${p.pageNumber} ---\n${p.textContent}`)
+        .join('\n\n');
+    } else {
+      formattedText = pages;
+    }
+
+    if (!this.isConfigured()) {
+      return this.fallbackDeadlineExtraction(formattedText);
+    }
+
+    const prompt = DEADLINE_EXTRACTION_PROMPT_TEMPLATE(formattedText);
+    const rawOutput = await this.completePrompt(prompt, DEADLINE_EXTRACTION_SYSTEM_PROMPT);
+    return this.parseAndValidateDeadlineResponse(rawOutput);
+  }
+
+  private parseAndValidateDeadlineResponse(rawOutput: string): DeadlineExtractionResult {
+    if (!rawOutput || !rawOutput.trim()) {
+      return { deadlines: [] };
+    }
+
+    let jsonStr = rawOutput.trim();
+    const jsonBlockMatch = jsonStr.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
+    if (jsonBlockMatch) {
+      jsonStr = jsonBlockMatch[1].trim();
+    } else {
+      const firstBrace = jsonStr.indexOf('{');
+      const lastBrace = jsonStr.lastIndexOf('}');
+      if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+        jsonStr = jsonStr.slice(firstBrace, lastBrace + 1);
+      }
+    }
+
+    try {
+      const jsonObject = JSON.parse(jsonStr);
+      const parseResult = DeadlineExtractionResultSchema.safeParse(jsonObject);
+      if (parseResult.success) {
+        return parseResult.data;
+      }
+
+      console.warn('Zod deadline schema warnings:', parseResult.error.format());
+      const rawList = Array.isArray(jsonObject?.deadlines)
+        ? jsonObject.deadlines
+        : Array.isArray(jsonObject)
+        ? jsonObject
+        : [];
+
+      const recovered: ExtractedDeadline[] = [];
+      for (const item of rawList) {
+        if (!item || (!item.title && !item.deadlineText)) continue;
+
+        const rawStatus = String(item.status || 'UPCOMING').toUpperCase();
+        const validStatus: 'UPCOMING' | 'DUE_SOON' | 'OVERDUE' | 'COMPLETED' | 'EXPIRED' | 'NEEDS_REVIEW' =
+          ['UPCOMING', 'DUE_SOON', 'OVERDUE', 'COMPLETED', 'EXPIRED', 'NEEDS_REVIEW'].includes(rawStatus)
+            ? (rawStatus as 'UPCOMING' | 'DUE_SOON' | 'OVERDUE' | 'COMPLETED' | 'EXPIRED' | 'NEEDS_REVIEW')
+            : 'UPCOMING';
+
+        recovered.push({
+          title: String(item.title || item.name || 'Contract Deadline').trim(),
+          description: sanitizeString(item.description),
+          dueDate: sanitizeString(item.dueDate),
+          deadlineText: sanitizeString(item.deadlineText || item.deadline),
+          noticeDays: typeof item.noticeDays === 'number' ? item.noticeDays : 30,
+          noticePeriodText: sanitizeString(item.noticePeriodText || item.noticePeriod),
+          responsibleParty: sanitizeString(item.responsibleParty),
+          category: String(item.category || 'Deadline').trim(),
+          severity: ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'].includes(String(item.severity).toUpperCase())
+            ? (String(item.severity).toUpperCase() as 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL')
+            : 'MEDIUM',
+          confidence: typeof item.confidence === 'number' ? Math.min(Math.max(item.confidence, 0), 1) : 0.85,
+          clauseNumber: sanitizeString(item.clauseNumber),
+          pageNumber: typeof item.pageNumber === 'number' ? item.pageNumber : null,
+          evidence: String(item.evidence || item.evidenceText || item.title || '').trim(),
+          status: validStatus,
+          obligationId: sanitizeString(item.obligationId),
+        });
+      }
+
+      return { deadlines: recovered };
+    } catch (err) {
+      console.error('Failed to parse AI Deadline JSON response:', err);
+      return { deadlines: [] };
+    }
+  }
+
+  /**
+   * Fallback rule-based deadline extraction when AI API key is not configured.
+   */
+  private fallbackDeadlineExtraction(rawText: string): DeadlineExtractionResult {
+    const deadlines: ExtractedDeadline[] = [];
+    const lines = rawText.split('\n');
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line) continue;
+
+      const lower = line.toLowerCase();
+      if (
+        lower.includes('notice') ||
+        lower.includes('termination') ||
+        lower.includes('renew') ||
+        lower.includes('expire') ||
+        lower.includes('due date') ||
+        lower.includes('within')
+      ) {
+        let noticeDays = 30;
+        const noticeMatch = lower.match(/(\d+)\s*days?/);
+        if (noticeMatch) {
+          noticeDays = parseInt(noticeMatch[1], 10);
+        }
+
+        let respParty: string | null = null;
+        if (lower.includes('supplier')) respParty = 'Supplier';
+        else if (lower.includes('client') || lower.includes('customer')) respParty = 'Client';
+        else if (lower.includes('vendor')) respParty = 'Vendor';
+        else if (lower.includes('processor')) respParty = 'Data Processor';
+        else respParty = 'NEEDS_REVIEW';
+
+        let category = 'Notice Window';
+        if (lower.includes('renew')) category = 'Renewal';
+        else if (lower.includes('terminat')) category = 'Termination';
+        else if (lower.includes('expir')) category = 'Expiration';
+        else if (lower.includes('sla')) category = 'SLA';
+
+        // Calculate a dummy estimated date if relative
+        const estDate = new Date();
+        estDate.setDate(estDate.getDate() + noticeDays);
+
+        deadlines.push({
+          title: line.length > 60 ? `${line.slice(0, 57)}...` : line,
+          description: line,
+          dueDate: estDate.toISOString().split('T')[0],
+          deadlineText: line,
+          noticeDays,
+          noticePeriodText: `${noticeDays} days prior notice`,
+          responsibleParty: respParty,
+          category,
+          severity: lower.includes('terminat') || lower.includes('breach') ? 'HIGH' : 'MEDIUM',
+          confidence: 0.8,
+          clauseNumber: null,
+          pageNumber: 1,
+          evidence: line,
+          status: 'UPCOMING',
+          obligationId: null,
+        });
+
+        if (deadlines.length >= 5) break;
+      }
+    }
+
+    return { deadlines };
   }
 
   private parseAndValidateConflictResponse(

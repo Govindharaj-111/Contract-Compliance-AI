@@ -1,6 +1,7 @@
 export type SeverityLevel = 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL';
 export type ContractStatus = 'DRAFT' | 'PENDING_ANALYSIS' | 'ANALYZED' | 'COMPLIANCE_REVIEW' | 'ARCHIVED';
 export type ObligationStatus = 'PENDING' | 'IN_PROGRESS' | 'FULFILLED' | 'BREACHED' | 'EXPIRED';
+export type DeadlineStatus = 'UPCOMING' | 'DUE_SOON' | 'OVERDUE' | 'COMPLETED' | 'EXPIRED' | 'NEEDS_REVIEW';
 
 export interface AICitation {
   documentId: string;
@@ -43,20 +44,42 @@ export interface Obligation {
   evidenceText?: string | null;
   createdAt: string;
   updatedAt: string;
+  contract?: {
+    title: string;
+    fileName: string;
+  };
 }
 
 export interface Deadline {
   id: string;
   contractId: string;
-  obligationId?: string;
+  obligationId?: string | null;
   title: string;
-  dueDate: string;
+  description?: string | null;
+  dueDate?: string | null;
+  deadlineText?: string | null;
   noticeDays: number;
+  noticePeriodText?: string | null;
+  responsibleParty?: string | null;
+  status: DeadlineStatus;
+  severity: SeverityLevel;
+  confidence?: number | null;
+  pageNumber?: number | null;
+  clauseNumber?: string | null;
+  evidenceText?: string | null;
   isAlertSent: boolean;
   createdAt: string;
+  updatedAt?: string;
   contract?: {
+    id?: string;
     title: string;
+    fileName?: string;
   };
+  obligation?: {
+    id: string;
+    title: string;
+    description?: string;
+  } | null;
 }
 
 export interface PolicyRequirement {

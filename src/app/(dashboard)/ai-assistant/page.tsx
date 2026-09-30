@@ -18,7 +18,6 @@ import {
   Check,
   ExternalLink,
   Quote,
-  Scale,
 } from 'lucide-react';
 import { AICitation } from '@/types';
 
