@@ -15,6 +15,7 @@ import {
   FileSearch,
   Database,
   Layers,
+  BarChart3,
 } from 'lucide-react';
 
 const navigationItems = [
@@ -25,7 +26,9 @@ const navigationItems = [
   { name: 'Policy Conflicts', href: '/conflicts', icon: AlertTriangle },
   { name: 'Internal Policies', href: '/policies', icon: ShieldCheck },
   { name: 'AI Assistant', href: '/assistant', icon: Bot },
+  { name: 'Risk Analytics', href: '/analytics', icon: BarChart3 },
 ];
+
 
 
 export function Sidebar() {
