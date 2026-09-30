@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 const navigationItems = [
-  { name: 'Dashboard', href: '/', icon: LayoutDashboard },
+  { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
   { name: 'Contracts', href: '/contracts', icon: FileText },
   { name: 'Obligations', href: '/obligations', icon: CheckSquare },
   { name: 'Deadlines', href: '/deadlines', icon: Clock },
@@ -29,8 +29,6 @@ const navigationItems = [
   { name: 'Risk Analytics', href: '/analytics', icon: BarChart3 },
 ];
 
-
-
 export function Sidebar() {
   const pathname = usePathname();
 
@@ -38,7 +36,7 @@ export function Sidebar() {
     <aside className="fixed left-0 top-0 z-40 h-screen w-64 border-r border-slate-800 bg-slate-950/95 backdrop-blur-md flex flex-col justify-between">
       <div>
         {/* Brand Header */}
-        <div className="flex h-16 items-center gap-3 border-b border-slate-800 px-6">
+        <Link href="/" className="flex h-16 items-center gap-3 border-b border-slate-800 px-6 hover:bg-slate-900/50 transition-colors">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-600 text-white shadow-lg shadow-indigo-600/30">
             <FileSearch className="h-5 w-5" />
           </div>
@@ -50,7 +48,7 @@ export function Sidebar() {
               SYSTEM AI-03
             </span>
           </div>
-        </div>
+        </Link>
 
         {/* Navigation List */}
         <nav className="space-y-1 px-3 py-4">

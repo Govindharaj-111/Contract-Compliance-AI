@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Search, Bell, ShieldCheck, User } from 'lucide-react';
 
 const pathTitleMap: Record<string, string> = {
-  '/': 'Dashboard Overview',
+  '/dashboard': 'Dashboard Overview',
   '/contracts': 'Contract Ingestion & Storage',
   '/obligations': 'Obligations & SLAs',
   '/deadlines': 'Deadlines & Notice Windows',

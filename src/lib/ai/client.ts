@@ -67,7 +67,8 @@ export class AIClient {
       process.env.OPENAI_API_KEY ||
       process.env.ANTHROPIC_API_KEY ||
       process.env.GEMINI_API_KEY ||
-      process.env.GOOGLE_GENERATIVE_AI_API_KEY
+      process.env.GOOGLE_GENERATIVE_AI_API_KEY ||
+      process.env.CHATBOT_API_KEY
     );
   }
 
@@ -77,7 +78,7 @@ export class AIClient {
   public getActiveProvider(): string | null {
     if (process.env.OPENAI_API_KEY) return 'OpenAI';
     if (process.env.ANTHROPIC_API_KEY) return 'Anthropic';
-    if (process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY) return 'Google Gemini';
+    if (process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.CHATBOT_API_KEY) return 'Google Gemini / Chatbot AI';
     return null;
   }
 
@@ -87,7 +88,7 @@ export class AIClient {
   public async completePrompt(prompt: string, systemPrompt?: string): Promise<string> {
     if (!this.isConfigured()) {
       throw new Error(
-        'AI API key is not configured. Please set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GEMINI_API_KEY in your environment variables (.env).'
+        'AI API key is not configured. Please set OPENAI_API_KEY, ANTHROPIC_API_KEY, GEMINI_API_KEY, or CHATBOT_API_KEY in your environment variables (.env).'
       );
     }
 
@@ -156,8 +157,8 @@ export class AIClient {
       return data.content?.[0]?.text || '';
     }
 
-    // 3. Google Gemini Integration
-    const geminiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+    // 3. Google Gemini / Chatbot AI Integration
+    const geminiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.CHATBOT_API_KEY;
     if (geminiKey) {
       const model = this.config.model || process.env.LLM_MODEL || 'gemini-1.5-flash';
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${geminiKey}`;
