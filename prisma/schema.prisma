@@ -1,0 +1,160 @@
+// Prisma schema for Autonomous Contract & Compliance Intelligence System (AI-03)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Contract {
+  id              String           @id @default(uuid())
+  title           String
+  fileName        String
+  fileUrl         String?
+  fileSize        Int?
+  mimeType        String?
+  pageCount       Int?             @default(0)
+  status          String           @default("PENDING_ANALYSIS")
+  extractedText   String?
+  uploadedAt      DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  pages           ContractPage[]
+  obligations     Obligation[]
+  deadlines       Deadline[]
+  conflicts       PolicyConflict[]
+  parties         Party[]
+}
+
+model ContractPage {
+  id           String   @id @default(uuid())
+  contractId   String
+  contract     Contract @relation(fields: [contractId], references: [id], onDelete: Cascade)
+  pageNumber   Int
+  sectionTitle String?
+  textContent  String
+  createdAt    DateTime @default(now())
+
+  @@index([contractId, pageNumber])
+}
+
+model Obligation {
+  id                      String           @id @default(uuid())
+  contractId              String
+  contract                Contract         @relation(fields: [contractId], references: [id], onDelete: Cascade)
+  title                   String
+  description             String
+  category                String           // e.g. Compliance, SLA, Data Handling, Payment, Notice
+  responsibleParty        String?
+  deadlineText            String?
+  noticePeriod            String?
+  slaRequirement          String?
+  dataHandlingRequirement String?
+  confidence              Float?           @default(1.0)
+  status                  String           @default("PENDING")
+  severity                String           @default("MEDIUM")
+  pageNumber              Int?
+  clauseNumber            String?
+  evidenceText            String?
+  createdAt               DateTime         @default(now())
+  updatedAt               DateTime         @updatedAt
+
+  deadlines               Deadline[]
+  parties                 Party[]
+  conflicts               PolicyConflict[]
+}
+
+model Deadline {
+  id              String        @id @default(uuid())
+  contractId      String
+  contract        Contract      @relation(fields: [contractId], references: [id], onDelete: Cascade)
+  obligationId    String?
+  obligation      Obligation?   @relation(fields: [obligationId], references: [id], onDelete: SetNull)
+  title           String
+  dueDate         DateTime
+  noticeDays      Int           @default(30)
+  isAlertSent     Boolean       @default(false)
+  createdAt       DateTime      @default(now())
+}
+
+model Party {
+  id              String      @id @default(uuid())
+  contractId      String
+  contract        Contract    @relation(fields: [contractId], references: [id], onDelete: Cascade)
+  obligationId    String?
+  obligation      Obligation? @relation(fields: [obligationId], references: [id], onDelete: SetNull)
+  name            String
+  role            String      // Supplier, Client, Vendor, Data Processor
+  contactEmail    String?
+  createdAt       DateTime    @default(now())
+}
+
+model Policy {
+  id              String              @id @default(uuid())
+  title           String
+  code            String              @unique // e.g. POL-SEC-001
+  category        String              // Security, Privacy, SLA, Financial, Retention
+  content         String
+  isActive        Boolean             @default(true)
+  version         String              @default("1.0")
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  requirements    PolicyRequirement[]
+  conflicts       PolicyConflict[]
+}
+
+model PolicyRequirement {
+  id           String           @id @default(uuid())
+  policyId     String
+  policy       Policy           @relation(fields: [policyId], references: [id], onDelete: Cascade)
+  requirement  String
+  category     String?
+  clauseCode   String?
+  createdAt    DateTime         @default(now())
+
+  conflicts    PolicyConflict[]
+}
+
+model PolicyConflict {
+  id                  String             @id @default(uuid())
+  contractId          String
+  contract            Contract           @relation(fields: [contractId], references: [id], onDelete: Cascade)
+  obligationId        String?
+  obligation          Obligation?        @relation(fields: [obligationId], references: [id], onDelete: SetNull)
+  policyId            String
+  policy              Policy             @relation(fields: [policyId], references: [id], onDelete: Cascade)
+  policyRequirementId String?
+  policyRequirementRef PolicyRequirement? @relation(fields: [policyRequirementId], references: [id], onDelete: SetNull)
+
+  title               String
+  description         String
+  severity            String             @default("HIGH")
+  confidence          Float              @default(0.85)
+
+  contractName        String?
+  contractClause      String?
+  contractRequirement String?
+  policyName          String?
+  policyVersion       String?
+  policyRequirement   String?
+
+  contractEvidence    String?
+  policyEvidence      String?
+  pageNumber          Int?
+  status              String             @default("UNRESOLVED") // UNRESOLVED, NEEDS_REVIEW, REVIEWED, WAIVED, RESOLVED
+  createdAt           DateTime           @default(now())
+  updatedAt           DateTime           @updatedAt
+}
+
+model ChatMessage {
+  id              String   @id @default(uuid())
+  sessionTitle    String   @default("General Chat")
+  role            String   // user | assistant | system
+  content         String
+  citationMeta    String?  // JSON string containing clause, page, document source
+  createdAt       DateTime @default(now())
+}
