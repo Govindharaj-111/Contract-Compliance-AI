@@ -13,7 +13,10 @@ const pathTitleMap: Record<string, string> = {
   '/deadlines': 'Deadlines & Notice Windows',
   '/conflicts': 'Policy Compliance Conflicts',
   '/policies': 'Internal Corporate Policies',
+  '/assistant': 'AI Contract Assistant',
   '/ai-assistant': 'AI Contract Assistant',
+  '/analytics': 'Risk Analytics & Vendor Ratings',
+  '/portfolio': 'Portfolio Analytics',
 };
 
 export function Header() {
