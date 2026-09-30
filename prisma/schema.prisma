@@ -169,3 +169,26 @@ model ChatMessage {
   citationMeta    String?  // JSON string containing clause, page, document source
   createdAt       DateTime @default(now())
 }
+
+model Conversation {
+  id        String                @id @default(uuid())
+  title     String                @default("Contract Assistant Conversation")
+  createdAt DateTime              @default(now())
+  updatedAt DateTime              @updatedAt
+  messages  ConversationMessage[]
+}
+
+model ConversationMessage {
+  id             String       @id @default(uuid())
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  role           String       // user | assistant | system
+  content        String
+  confidence     Float?
+  needsReview    Boolean      @default(false)
+  sourcesJson    String?      // JSON string of sources array
+  createdAt      DateTime     @default(now())
+
+  @@index([conversationId])
+}
+

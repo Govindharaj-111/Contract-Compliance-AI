@@ -24,8 +24,9 @@ const navigationItems = [
   { name: 'Deadlines', href: '/deadlines', icon: Clock },
   { name: 'Policy Conflicts', href: '/conflicts', icon: AlertTriangle },
   { name: 'Internal Policies', href: '/policies', icon: ShieldCheck },
-  { name: 'AI Assistant', href: '/ai-assistant', icon: Bot },
+  { name: 'AI Assistant', href: '/assistant', icon: Bot },
 ];
+
 
 export function Sidebar() {
   const pathname = usePathname();

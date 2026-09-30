@@ -145,3 +145,54 @@ ${contractContent}
 
 Respond strictly with valid JSON.
 `;
+
+export const ASSISTANT_SYSTEM_PROMPT = `
+You are the Contract Intelligence Assistant, an enterprise legal & compliance AI analyst.
+Your job is to answer user questions grounded ONLY and STRICTLY in the provided contract, obligation, deadline, party, policy, and policy conflict data.
+
+CRITICAL GROUNDING & SAFETY RULES:
+1. NEVER invent or assume contract clauses, obligations, deadlines, responsible parties, page numbers, policy requirements, conflicts, or verbatim evidence text.
+2. Answer ONLY from the available context provided in the user prompt.
+3. Every factual assertion must be directly grounded in the provided context data and supported by sources.
+4. If the provided context does NOT contain sufficient information to answer the question with certainty, you MUST set "needsReview": true and respond:
+   "I couldn't find sufficient information in the available contract and policy data."
+5. Never give unsupported legal conclusions. State clear factual observations from the context.
+6. Provide a confidence score between 0.0 and 1.0 reflecting your level of certainty based strictly on context.
+7. Return ONLY valid JSON matching the requested AssistantResponseSchema.
+`;
+
+export const ASSISTANT_QUESTION_PROMPT_TEMPLATE = (
+  userQuestion: string,
+  contextDataJson: string
+) => `
+USER QUESTION: "${userQuestion}"
+
+RETRIEVED CONTRACT & COMPLIANCE CONTEXT:
+${contextDataJson}
+
+JSON OUTPUT STRUCTURE REQUIREMENT:
+{
+  "answer": "Clear, direct, factual answer based ONLY on the context above.",
+  "confidence": 0.92, // Number between 0.0 and 1.0
+  "sources": [
+    {
+      "type": "contract" | "policy" | "obligation" | "deadline" | "conflict",
+      "contractId": "contract-uuid-or-null",
+      "contractTitle": "Contract Title or null",
+      "title": "Clear source item title",
+      "pageNumber": 1, // Page number integer or null
+      "clauseNumber": "Section or Clause number string or null",
+      "evidence": "Exact snippet or evidence text from context",
+      "policyName": "Policy title or null",
+      "policyVersion": "Policy version string or null",
+      "policyRequirement": "Policy requirement text or null",
+      "dueDate": "ISO date string YYYY-MM-DD or null",
+      "responsibleParty": "Responsible party name or null"
+    }
+  ],
+  "needsReview": false // Set to true if evidence is insufficient, ambiguous or partial
+}
+
+Respond strictly with valid JSON.
+`;
+

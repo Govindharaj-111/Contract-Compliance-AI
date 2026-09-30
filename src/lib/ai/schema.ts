@@ -97,3 +97,35 @@ export const DeadlineExtractionResultSchema = z.object({
 
 export type ExtractedDeadline = z.infer<typeof ExtractedDeadlineSchema>;
 export type DeadlineExtractionResult = z.infer<typeof DeadlineExtractionResultSchema>;
+
+/**
+ * Zod schema for individual source evidence item in AI Assistant response (Stage 7).
+ */
+export const AssistantSourceSchema = z.object({
+  type: z.enum(['contract', 'policy', 'obligation', 'deadline', 'conflict']).default('contract'),
+  contractId: z.string().nullable().optional().default(null),
+  contractTitle: z.string().nullable().optional().default(null),
+  title: z.string().min(1, 'Source title is required'),
+  pageNumber: z.number().int().nullable().optional().default(null),
+  clauseNumber: z.string().nullable().optional().default(null),
+  evidence: z.string().min(1, 'Source evidence text is required'),
+  policyName: z.string().nullable().optional().default(null),
+  policyVersion: z.string().nullable().optional().default(null),
+  policyRequirement: z.string().nullable().optional().default(null),
+  dueDate: z.string().nullable().optional().default(null),
+  responsibleParty: z.string().nullable().optional().default(null),
+});
+
+/**
+ * Zod schema for AI Contract Assistant response (Stage 7).
+ */
+export const AssistantResponseSchema = z.object({
+  answer: z.string().min(1, 'Assistant answer cannot be empty'),
+  confidence: z.number().min(0).max(1).default(0.9),
+  sources: z.array(AssistantSourceSchema).default([]),
+  needsReview: z.boolean().default(false),
+});
+
+export type AssistantSource = z.infer<typeof AssistantSourceSchema>;
+export type AssistantResponse = z.infer<typeof AssistantResponseSchema>;
+

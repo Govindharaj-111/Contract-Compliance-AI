@@ -23,6 +23,8 @@ import {
   AlertCircle,
   CheckCircle2,
   Eye,
+  Bot,
+  Sparkles,
 } from 'lucide-react';
 import { Contract, Deadline } from '@/types';
 
@@ -274,10 +276,35 @@ export default function DashboardPage() {
         </Card>
       </div>
 
+      {/* Ask Contract AI Callout Card */}
+      <Card className="border-indigo-500/30 bg-gradient-to-r from-indigo-950/60 via-slate-900/80 to-purple-950/40 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
+        <div className="space-y-2 max-w-xl">
+          <div className="flex items-center gap-2">
+            <Badge variant="outline" className="border-indigo-400/40 text-indigo-300 bg-indigo-950/60 text-[10px] uppercase font-mono">
+              Stage 7 Contract Intelligence Assistant
+            </Badge>
+            <Sparkles className="h-4 w-4 text-indigo-400 animate-pulse" />
+          </div>
+          <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
+            <Bot className="h-5 w-5 text-indigo-400" />
+            Ask Contract AI
+          </h3>
+          <p className="text-xs text-slate-300 leading-relaxed">
+            Ask natural-language questions about your contracts, obligations, deadlines, and compliance risks. Answers are grounded in your database with exact evidence citations.
+          </p>
+        </div>
+        <Link href="/assistant">
+          <Button className="gap-2 bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30 font-semibold text-xs py-5 px-6 shrink-0">
+            <span>Open Assistant →</span>
+          </Button>
+        </Link>
+      </Card>
+
       {/* Main Grid: Recent Contracts & Upcoming Deadlines Sections */}
       <div className="grid gap-8 lg:grid-cols-2">
         {/* Section 1: Recent Contracts */}
         <Card className="border-slate-800 bg-slate-900/70 flex flex-col justify-between">
+
           <CardHeader className="border-b border-slate-800/80 pb-4">
             <div className="flex items-center justify-between">
               <div>
