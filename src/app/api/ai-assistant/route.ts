@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { askAssistant } from '@/lib/ai/assistant';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: Request) {
   try {
     const body = await req.json().catch(() => ({}));

@@ -9,6 +9,8 @@ import {
   RiskLevel,
 } from '@/lib/ai/risk-scoring';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const [contracts, obligations, deadlines, conflicts, parties] = await Promise.all([
