@@ -1,0 +1,1253 @@
+{
+  "exportedAt": "2026-10-23T17:27:23.978Z",
+  "contracts": [
+    {
+      "id": "8adaf140-4f00-4932-9a1e-b6fbdaceae6b",
+      "title": "Master Cloud & SaaS Services Agreement 2026",
+      "fileName": "Master_Services_Agreement_2026.pdf",
+      "fileUrl": null,
+      "fileSize": 1048576,
+      "mimeType": "application/pdf",
+      "pageCount": 14,
+      "status": "ANALYZED",
+      "extractedText": "Sample Master Cloud & SaaS Agreement 2026 containing SLAs, Notice Windows, Security Obligations and Data Handling Terms.",
+      "uploadedAt": "2026-09-30T12:33:38.948Z",
+      "updatedAt": "2026-09-30T12:33:38.948Z",
+      "pages": [
+        {
+          "id": "8f7de93f-8570-4430-a5ed-8609d37e29e1",
+          "contractId": "8adaf140-4f00-4932-9a1e-b6fbdaceae6b",
+          "pageNumber": 1,
+          "sectionTitle": "Section 1 - Definitions & Scope",
+          "textContent": "This Master Cloud Services Agreement (\"Agreement\") is entered into by and between Acme Cloud Solutions (\"Supplier\") and Enterprise Corp (\"Client\").",
+          "createdAt": "2026-09-30T12:33:38.948Z"
+        },
+        {
+          "id": "fe12f2ea-ffba-4da2-a57f-997a531eb603",
+          "contractId": "8adaf140-4f00-4932-9a1e-b6fbdaceae6b",
+          "pageNumber": 5,
+          "sectionTitle": "Section 5 - Security & Audit",
+          "textContent": "Supplier shall undergo an Annual Cyber Risk Assessment Audit within 45 days of the start of each calendar fiscal year.",
+          "createdAt": "2026-09-30T12:33:38.948Z"
+        },
+        {
+          "id": "b03c6452-9eda-4e7f-95d8-e7923da5f72a",
+          "contractId": "8adaf140-4f00-4932-9a1e-b6fbdaceae6b",
+          "pageNumber": 12,
+          "sectionTitle": "Section 12 - Term & Renewal",
+          "textContent": "Either party may terminate this agreement without cause by providing at least 60 days prior written notice prior to the expiration of the term.",
+          "createdAt": "2026-09-30T12:33:38.948Z"
+        }
+      ],
+      "obligations": [],
+      "deadlines": [
+        {
+          "id": "7c86c657-275f-4b78-983e-1a4866130489",
+          "contractId": "8adaf140-4f00-4932-9a1e-b6fbdaceae6b",
+          "obligationId": null,
+          "title": "Annual Cyber Risk Assessment Audit",
+          "description": "Supplier must submit third-party SOC 2 Type II and ISO 27001 audit report.",
+          "dueDate": "2026-11-14T12:33:38.965Z",
+          "deadlineText": "Within 45 days of fiscal year start",
+          "noticeDays": 30,
+          "noticePeriodText": "30 days prior written notice",
+          "responsibleParty": "Supplier",
+          "status": "UPCOMING",
+          "severity": "HIGH",
+          "confidence": 0.95,
+          "pageNumber": 5,
+          "clauseNumber": "Section 5.4",
+          "evidenceText": "Supplier shall undergo an Annual Cyber Risk Assessment Audit within 45 days of fiscal year start.",
+          "isAlertSent": false,
+          "createdAt": "2026-09-30T12:33:38.973Z",
+          "updatedAt": "2026-09-30T12:33:38.973Z"
+        },
+        {
+          "id": "135eb466-c758-4a86-8c0e-324299e124a4",
+          "contractId": "8adaf140-4f00-4932-9a1e-b6fbdaceae6b",
+          "obligationId": null,
+          "title": "Q2 Vulnerability Remediation Report",
+          "description": "Vendor mandatory submission of critical vulnerability patch verification.",
+          "dueDate": "2026-09-15T12:33:38.965Z",
+          "deadlineText": "Due on June 15, 2026",
+          "noticeDays": 14,
+          "noticePeriodText": "14 days notice window",
+          "responsibleParty": "Vendor",
+          "status": "OVERDUE",
+          "severity": "CRITICAL",
+          "confidence": 0.9,
+          "pageNumber": 8,
+          "clauseNumber": "Clause 8.1",
+          "evidenceText": "Vendor must provide critical vulnerability patch report no later than 15 days following quarter end.",
+          "isAlertSent": false,
+          "createdAt": "2026-09-30T12:33:38.982Z",
+          "updatedAt": "2026-09-30T12:33:38.982Z"
+        },
+        {
+          "id": "d78b66b1-a6b8-48f5-b6b6-52bd01d6c9ea",
+          "contractId": "8adaf140-4f00-4932-9a1e-b6fbdaceae6b",
+          "obligationId": null,
+          "title": "Initial Data Protection Impact Assessment (DPIA)",
+          "description": "Submission of GDPR Article 35 risk assessment report.",
+          "dueDate": "2026-08-01T12:33:38.965Z",
+          "deadlineText": "Prior to contract commencement",
+          "noticeDays": 30,
+          "noticePeriodText": "Completed upon onboarding",
+          "responsibleParty": "Data Processor",
+          "status": "COMPLETED",
+          "severity": "MEDIUM",
+          "confidence": 1,
+          "pageNumber": 3,
+          "clauseNumber": "Clause 3.2",
+          "evidenceText": "Data Processor shall complete and deliver the DPIA prior to processing customer PII.",
+          "isAlertSent": false,
+          "createdAt": "2026-09-30T12:33:38.992Z",
+          "updatedAt": "2026-09-30T12:33:38.992Z"
+        },
+        {
+          "id": "2183ee10-441c-4716-bad0-9bb5fc3822fd",
+          "contractId": "8adaf140-4f00-4932-9a1e-b6fbdaceae6b",
+          "obligationId": null,
+          "title": "MSA Contract Non-Renewal Written Notice Window",
+          "description": "Advance notice deadline to opt out of automatic 1-year contract extension.",
+          "dueDate": "2026-10-05T12:33:38.965Z",
+          "deadlineText": "At least 60 days prior to contract expiration date",
+          "noticeDays": 60,
+          "noticePeriodText": "60 days advance written notice mandatory",
+          "responsibleParty": "Client",
+          "status": "DUE_SOON",
+          "severity": "CRITICAL",
+          "confidence": 0.92,
+          "pageNumber": 12,
+          "clauseNumber": "Section 12.3",
+          "evidenceText": "Either party may prevent automatic renewal by providing written non-renewal notice at least 60 days prior.",
+          "isAlertSent": false,
+          "createdAt": "2026-09-30T12:33:39.005Z",
+          "updatedAt": "2026-09-30T12:33:39.005Z"
+        },
+        {
+          "id": "a7f09d91-6f2f-4191-a964-26cf86d983e0",
+          "contractId": "8adaf140-4f00-4932-9a1e-b6fbdaceae6b",
+          "obligationId": null,
+          "title": "Discontinued Service Data Migration & Purge Phase-Out",
+          "description": "Permanent deletion of legacy data upon service transition.",
+          "dueDate": null,
+          "deadlineText": "Upon mutually agreed phase-out schedule following transition",
+          "noticeDays": 30,
+          "noticePeriodText": "To be determined upon phase-out",
+          "responsibleParty": "NEEDS_REVIEW",
+          "status": "NEEDS_REVIEW",
+          "severity": "MEDIUM",
+          "confidence": 0.65,
+          "pageNumber": 14,
+          "clauseNumber": "Section 14.7",
+          "evidenceText": "Purge shall occur upon mutually agreed phase-out schedule following transition completion.",
+          "isAlertSent": false,
+          "createdAt": "2026-09-30T12:33:39.023Z",
+          "updatedAt": "2026-09-30T12:33:39.023Z"
+        }
+      ],
+      "conflicts": [],
+      "parties": []
+    }
+  ],
+  "policies": [
+    {
+      "id": "c644353e-fc33-4616-9cbd-77525555c958",
+      "title": "Data Encryption & Security Standard",
+      "code": "POL-SEC-001",
+      "category": "Security",
+      "content": "All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+      "isActive": true,
+      "version": "1.5",
+      "createdAt": "2026-09-28T01:59:25.380Z",
+      "updatedAt": "2026-09-28T01:59:25.380Z",
+      "requirements": [
+        {
+          "id": "16fbc32d-559e-4652-9c10-77591d8f8031",
+          "policyId": "c644353e-fc33-4616-9cbd-77525555c958",
+          "requirement": "AES-256 encryption mandatory for all stored customer data.",
+          "category": "Security",
+          "clauseCode": "POL-SEC-001-A",
+          "createdAt": "2026-09-28T01:59:25.380Z"
+        },
+        {
+          "id": "8ecfb116-f70b-43fe-9f86-cb92e6040aac",
+          "policyId": "c644353e-fc33-4616-9cbd-77525555c958",
+          "requirement": "TLS 1.3 mandatory for data in transit.",
+          "category": "Security",
+          "clauseCode": "POL-SEC-001-B",
+          "createdAt": "2026-09-28T01:59:25.380Z"
+        }
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "60466a9a-cf53-4242-b725-59791eb4ddba",
+      "title": "Data Retention & Erasure Policy",
+      "code": "POL-PRIV-001",
+      "category": "Data Privacy",
+      "content": "Customer data and personal information must be permanently purged within 90 days following agreement termination or explicit written erasure request under GDPR/CCPA compliance.",
+      "isActive": true,
+      "version": "1.0",
+      "createdAt": "2026-09-28T01:59:25.392Z",
+      "updatedAt": "2026-09-28T01:59:25.392Z",
+      "requirements": [
+        {
+          "id": "b011b369-d412-4af7-9797-3db0c452a365",
+          "policyId": "60466a9a-cf53-4242-b725-59791eb4ddba",
+          "requirement": "Permanent deletion of customer data within 90 days of contract termination.",
+          "category": "Data Privacy",
+          "clauseCode": "POL-PRIV-001-A",
+          "createdAt": "2026-09-28T01:59:25.392Z"
+        }
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "46b6076c-739a-4ba0-95e9-d0182fae12f1",
+      "title": "Platform Availability & Uptime SLA Policy",
+      "code": "POL-SLA-001",
+      "category": "SLA",
+      "content": "SaaS platforms and managed services must guarantee a minimum monthly SLA availability of 99.9% uptime (excluding scheduled maintenance) with credit remedies for downtime breaches.",
+      "isActive": true,
+      "version": "2.1",
+      "createdAt": "2026-09-28T01:59:25.397Z",
+      "updatedAt": "2026-09-28T01:59:25.397Z",
+      "requirements": [
+        {
+          "id": "b8c77982-aa14-4b69-ae09-ef90099e2e51",
+          "policyId": "46b6076c-739a-4ba0-95e9-d0182fae12f1",
+          "requirement": "Minimum 99.9% monthly availability SLA requirement.",
+          "category": "SLA",
+          "clauseCode": "POL-SLA-001-A",
+          "createdAt": "2026-09-28T01:59:25.397Z"
+        }
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "651f06dc-ab95-4476-82fd-441beb3f6e35",
+      "title": "Contract Renewal & Termination Notice Window",
+      "code": "POL-NOT-001",
+      "category": "Notice & Term",
+      "content": "Agreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.",
+      "isActive": true,
+      "version": "1.2",
+      "createdAt": "2026-09-28T01:59:25.402Z",
+      "updatedAt": "2026-09-28T01:59:25.402Z",
+      "requirements": [
+        {
+          "id": "b0d05f5e-e1dc-45bd-b126-bee9f417db1a",
+          "policyId": "651f06dc-ab95-4476-82fd-441beb3f6e35",
+          "requirement": "Written non-renewal notice window of at least 60 days.",
+          "category": "Notice & Term",
+          "clauseCode": "POL-NOT-001-A",
+          "createdAt": "2026-09-28T01:59:25.402Z"
+        }
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "bad0e70b-c85d-48a1-b55d-9aa74c43add8",
+      "title": "Payment Terms & Late Fee Cap Standard",
+      "code": "POL-FIN-001",
+      "category": "Financial",
+      "content": "Standard vendor payment terms are Net 30 days from receipt of a valid invoice. Late payment charges shall not exceed 1.5% per month on overdue balances.",
+      "isActive": true,
+      "version": "1.0",
+      "createdAt": "2026-09-28T01:59:25.409Z",
+      "updatedAt": "2026-09-28T01:59:25.409Z",
+      "requirements": [
+        {
+          "id": "2ab9f7ec-5878-41c1-8746-19afc253e99f",
+          "policyId": "bad0e70b-c85d-48a1-b55d-9aa74c43add8",
+          "requirement": "Payment terms Net 30 days; late fee capped at 1.5% monthly.",
+          "category": "Financial",
+          "clauseCode": "POL-FIN-001-A",
+          "createdAt": "2026-09-28T01:59:25.409Z"
+        }
+      ],
+      "conflicts": []
+    }
+  ],
+  "chatMessages": [],
+  "conversations": [
+    {
+      "id": "1bdf0033-9fb3-4429-86ad-6f52073e78be",
+      "title": "What are the most important obligations in my c...",
+      "createdAt": "2026-09-30T15:40:30.152Z",
+      "updatedAt": "2026-09-30T15:40:30.152Z",
+      "messages": [
+        {
+          "id": "b431ab14-27e4-4105-b461-faca20750da0",
+          "conversationId": "1bdf0033-9fb3-4429-86ad-6f52073e78be",
+          "role": "user",
+          "content": "What are the most important obligations in my contracts?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:40:30.158Z"
+        },
+        {
+          "id": "49c9559c-6bbf-406e-88e8-b6a3c9fb8881",
+          "conversationId": "1bdf0033-9fb3-4429-86ad-6f52073e78be",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"title\":\"Data Encryption & Security Standard\",\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\"}]",
+          "createdAt": "2026-09-30T15:40:30.184Z"
+        }
+      ]
+    },
+    {
+      "id": "3ff909ca-0d62-4a94-b5f9-a1435f438c31",
+      "title": "Summarize obligations across all uploaded contr...",
+      "createdAt": "2026-09-30T15:40:30.192Z",
+      "updatedAt": "2026-09-30T15:40:30.192Z",
+      "messages": [
+        {
+          "id": "c82067d9-f859-43a8-b916-a1319f7fc18e",
+          "conversationId": "3ff909ca-0d62-4a94-b5f9-a1435f438c31",
+          "role": "user",
+          "content": "Summarize obligations across all uploaded contracts.",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:40:30.199Z"
+        },
+        {
+          "id": "3d2d8b72-8f22-4c77-86eb-3f4a6fbc2878",
+          "conversationId": "3ff909ca-0d62-4a94-b5f9-a1435f438c31",
+          "role": "assistant",
+          "content": "### Contract Intelligence Summary: **Master Cloud & SaaS Services Agreement 2026**\n\n• **Purpose / Status**: ANALYZED (Ingested 14 page(s))\n• **Key Obligations Extracted**: 0 obligation(s)\n• **Deadlines & Milestones**: 0 deadline(s)\n• **Policy Conflicts Detected**: 0 conflict(s)\n\nNo specific obligations extracted yet.",
+          "confidence": 0.92,
+          "needsReview": false,
+          "sourcesJson": "[]",
+          "createdAt": "2026-09-30T15:40:30.213Z"
+        }
+      ]
+    },
+    {
+      "id": "60d1611a-1ecf-48ae-8836-da7fff34cda0",
+      "title": "Which deadlines are coming up soon?",
+      "createdAt": "2026-09-30T15:40:30.221Z",
+      "updatedAt": "2026-09-30T15:40:30.221Z",
+      "messages": [
+        {
+          "id": "068d5f87-d9da-4fe9-ba57-02861e4b1f9e",
+          "conversationId": "60d1611a-1ecf-48ae-8836-da7fff34cda0",
+          "role": "user",
+          "content": "Which deadlines are coming up soon?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:40:30.227Z"
+        },
+        {
+          "id": "7bc3f2f8-31ec-4f71-bee4-6120ced8cc3a",
+          "conversationId": "60d1611a-1ecf-48ae-8836-da7fff34cda0",
+          "role": "assistant",
+          "content": "There are 2 deadline(s) recorded in your active contracts. Here are the most imminent:\n\n1. **Annual Cyber Risk Assessment Audit** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-11-14\n• **Notice Required**: 30 days\n• **Responsible**: Supplier\n• **Status**: UPCOMING\n\n2. **MSA Contract Non-Renewal Written Notice Window** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-10-05\n• **Notice Required**: 60 days\n• **Responsible**: Client\n• **Status**: DUE_SOON",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"Annual Cyber Risk Assessment Audit\",\"pageNumber\":5,\"clauseNumber\":\"Section 5.4\",\"evidence\":\"Supplier shall undergo an Annual Cyber Risk Assessment Audit within 45 days of fiscal year start.\",\"dueDate\":\"2026-11-14\",\"responsibleParty\":\"Supplier\"},{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"MSA Contract Non-Renewal Written Notice Window\",\"pageNumber\":12,\"clauseNumber\":\"Section 12.3\",\"evidence\":\"Either party may prevent automatic renewal by providing written non-renewal notice at least 60 days prior.\",\"dueDate\":\"2026-10-05\",\"responsibleParty\":\"Client\"}]",
+          "createdAt": "2026-09-30T15:40:30.243Z"
+        }
+      ]
+    },
+    {
+      "id": "11237a12-6e1d-4f27-9689-81ee4a5e0e1e",
+      "title": "Show me all high and critical compliance confli...",
+      "createdAt": "2026-09-30T15:40:30.252Z",
+      "updatedAt": "2026-09-30T15:40:30.252Z",
+      "messages": [
+        {
+          "id": "d389c741-b508-4de0-a966-9bd30f8915ec",
+          "conversationId": "11237a12-6e1d-4f27-9689-81ee4a5e0e1e",
+          "role": "user",
+          "content": "Show me all high and critical compliance conflicts.",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:40:30.260Z"
+        },
+        {
+          "id": "b9d529d7-a5e8-4adf-84a3-ed01afd2da0b",
+          "conversationId": "11237a12-6e1d-4f27-9689-81ee4a5e0e1e",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"title\":\"Data Encryption & Security Standard\",\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\"}]",
+          "createdAt": "2026-09-30T15:40:30.273Z"
+        }
+      ]
+    },
+    {
+      "id": "3ca59c5b-afa4-45af-b69f-a30b9b2ebadc",
+      "title": "What corporate policies exist for security and ...",
+      "createdAt": "2026-09-30T15:40:30.284Z",
+      "updatedAt": "2026-09-30T15:40:30.284Z",
+      "messages": [
+        {
+          "id": "dd3b58d7-e0a2-4b4f-9a47-4c6b18f373c9",
+          "conversationId": "3ca59c5b-afa4-45af-b69f-a30b9b2ebadc",
+          "role": "user",
+          "content": "What corporate policies exist for security and data retention?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:40:30.292Z"
+        },
+        {
+          "id": "b1bac581-7e5a-4525-800d-2bc555dc0a26",
+          "conversationId": "3ca59c5b-afa4-45af-b69f-a30b9b2ebadc",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"title\":\"Data Encryption & Security Standard\",\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\"}]",
+          "createdAt": "2026-09-30T15:40:30.319Z"
+        }
+      ]
+    },
+    {
+      "id": "798c70b0-7a0a-48a0-ba91-9504a1de50e1",
+      "title": "What is the secret quantum encryption key for M...",
+      "createdAt": "2026-09-30T15:40:30.328Z",
+      "updatedAt": "2026-09-30T15:40:30.328Z",
+      "messages": [
+        {
+          "id": "629762ea-dd64-4fc9-87dd-aeb16460b1a8",
+          "conversationId": "798c70b0-7a0a-48a0-ba91-9504a1de50e1",
+          "role": "user",
+          "content": "What is the secret quantum encryption key for Mars Rover launch in 2099?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:40:30.337Z"
+        },
+        {
+          "id": "bcc86dd5-1df6-410f-b8f9-9b2542c7d526",
+          "conversationId": "798c70b0-7a0a-48a0-ba91-9504a1de50e1",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"title\":\"Data Encryption & Security Standard\",\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\"}]",
+          "createdAt": "2026-09-30T15:40:30.347Z"
+        }
+      ]
+    },
+    {
+      "id": "b54da132-66f1-46b1-a8f6-e3d6444006cc",
+      "title": "Who is responsible for upcoming deadlines?",
+      "createdAt": "2026-09-30T15:40:30.355Z",
+      "updatedAt": "2026-09-30T15:40:30.355Z",
+      "messages": [
+        {
+          "id": "9f3cfa92-c6d4-448d-8787-769cb430bb6a",
+          "conversationId": "b54da132-66f1-46b1-a8f6-e3d6444006cc",
+          "role": "user",
+          "content": "Who is responsible for upcoming deadlines?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:40:30.362Z"
+        },
+        {
+          "id": "2792fb4e-4dcb-4389-b180-b116833e3312",
+          "conversationId": "b54da132-66f1-46b1-a8f6-e3d6444006cc",
+          "role": "assistant",
+          "content": "There are 1 deadline(s) recorded in your active contracts. Here are the most imminent:\n\n1. **Annual Cyber Risk Assessment Audit** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-11-14\n• **Notice Required**: 30 days\n• **Responsible**: Supplier\n• **Status**: UPCOMING",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"Annual Cyber Risk Assessment Audit\",\"pageNumber\":5,\"clauseNumber\":\"Section 5.4\",\"evidence\":\"Supplier shall undergo an Annual Cyber Risk Assessment Audit within 45 days of fiscal year start.\",\"dueDate\":\"2026-11-14\",\"responsibleParty\":\"Supplier\"}]",
+          "createdAt": "2026-09-30T15:40:30.373Z"
+        },
+        {
+          "id": "1e6ac423-f7cb-4ba6-9ce2-4b25d278a08a",
+          "conversationId": "b54da132-66f1-46b1-a8f6-e3d6444006cc",
+          "role": "user",
+          "content": "Which contract clauses conflict with company policies?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:40:30.381Z"
+        },
+        {
+          "id": "ca80637e-c325-4bbf-901b-1072a8c56aa3",
+          "conversationId": "b54da132-66f1-46b1-a8f6-e3d6444006cc",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-NOT-001] Contract Renewal & Termination Notice Window** (v1.2):\n\nAgreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"title\":\"Contract Renewal & Termination Notice Window\",\"evidence\":\"Agreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.\",\"policyName\":\"Contract Renewal & Termination Notice Window\",\"policyVersion\":\"1.2\",\"policyRequirement\":\"Agreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.\"}]",
+          "createdAt": "2026-09-30T15:40:30.393Z"
+        }
+      ]
+    },
+    {
+      "id": "1aa6a696-651e-4aff-ae80-2c7f921471ac",
+      "title": "What notice periods are required?",
+      "createdAt": "2026-09-30T15:40:30.399Z",
+      "updatedAt": "2026-09-30T15:40:30.399Z",
+      "messages": [
+        {
+          "id": "c5f732ba-57ee-4074-8275-a631e93cfaf8",
+          "conversationId": "1aa6a696-651e-4aff-ae80-2c7f921471ac",
+          "role": "user",
+          "content": "What notice periods are required?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:40:30.403Z"
+        },
+        {
+          "id": "3edae330-4413-4b70-85ab-fcf266833e4a",
+          "conversationId": "1aa6a696-651e-4aff-ae80-2c7f921471ac",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-NOT-001] Contract Renewal & Termination Notice Window** (v1.2):\n\nAgreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"title\":\"Contract Renewal & Termination Notice Window\",\"evidence\":\"Agreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.\",\"policyName\":\"Contract Renewal & Termination Notice Window\",\"policyVersion\":\"1.2\",\"policyRequirement\":\"Agreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.\"}]",
+          "createdAt": "2026-09-30T15:40:30.410Z"
+        }
+      ]
+    },
+    {
+      "id": "e9a324cb-69eb-464c-aa48-951ca83a1e86",
+      "title": "What are the most important obligations in my c...",
+      "createdAt": "2026-09-30T15:41:39.066Z",
+      "updatedAt": "2026-09-30T15:41:39.066Z",
+      "messages": [
+        {
+          "id": "92b75755-67c1-4a45-a055-ad97580fab9e",
+          "conversationId": "e9a324cb-69eb-464c-aa48-951ca83a1e86",
+          "role": "user",
+          "content": "What are the most important obligations in my contracts?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:41:39.074Z"
+        },
+        {
+          "id": "637a8e5f-75d7-455b-b714-0e6e374c2a05",
+          "conversationId": "e9a324cb-69eb-464c-aa48-951ca83a1e86",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"title\":\"Data Encryption & Security Standard\",\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\"}]",
+          "createdAt": "2026-09-30T15:41:39.101Z"
+        }
+      ]
+    },
+    {
+      "id": "7f527e6f-2588-401f-bf8d-0f10baaa33ec",
+      "title": "Summarize obligations across all uploaded contr...",
+      "createdAt": "2026-09-30T15:41:39.108Z",
+      "updatedAt": "2026-09-30T15:41:39.108Z",
+      "messages": [
+        {
+          "id": "4d883ec5-31b7-4449-be79-b1fc1cd16905",
+          "conversationId": "7f527e6f-2588-401f-bf8d-0f10baaa33ec",
+          "role": "user",
+          "content": "Summarize obligations across all uploaded contracts.",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:41:39.118Z"
+        },
+        {
+          "id": "409fc66a-1108-4264-8f35-d4fb05419d59",
+          "conversationId": "7f527e6f-2588-401f-bf8d-0f10baaa33ec",
+          "role": "assistant",
+          "content": "### Contract Intelligence Summary: **Master Cloud & SaaS Services Agreement 2026**\n\n• **Purpose / Status**: ANALYZED (Ingested 14 page(s))\n• **Key Obligations Extracted**: 0 obligation(s)\n• **Deadlines & Milestones**: 0 deadline(s)\n• **Policy Conflicts Detected**: 0 conflict(s)\n\nNo specific obligations extracted yet.",
+          "confidence": 0.92,
+          "needsReview": false,
+          "sourcesJson": "[]",
+          "createdAt": "2026-09-30T15:41:39.153Z"
+        }
+      ]
+    },
+    {
+      "id": "618ee731-c579-4bf8-b863-5f51e2ac5cce",
+      "title": "Which deadlines are coming up soon?",
+      "createdAt": "2026-09-30T15:41:39.171Z",
+      "updatedAt": "2026-09-30T15:41:39.171Z",
+      "messages": [
+        {
+          "id": "f65425b8-9119-4a94-a517-4df8d77ce79f",
+          "conversationId": "618ee731-c579-4bf8-b863-5f51e2ac5cce",
+          "role": "user",
+          "content": "Which deadlines are coming up soon?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:41:39.185Z"
+        },
+        {
+          "id": "ce113824-4455-42af-91c1-f7e343a732f4",
+          "conversationId": "618ee731-c579-4bf8-b863-5f51e2ac5cce",
+          "role": "assistant",
+          "content": "There are 2 deadline(s) recorded in your active contracts. Here are the most imminent:\n\n1. **Annual Cyber Risk Assessment Audit** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-11-14\n• **Notice Required**: 30 days\n• **Responsible**: Supplier\n• **Status**: UPCOMING\n\n2. **MSA Contract Non-Renewal Written Notice Window** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-10-05\n• **Notice Required**: 60 days\n• **Responsible**: Client\n• **Status**: DUE_SOON",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"Annual Cyber Risk Assessment Audit\",\"pageNumber\":5,\"clauseNumber\":\"Section 5.4\",\"evidence\":\"Supplier shall undergo an Annual Cyber Risk Assessment Audit within 45 days of fiscal year start.\",\"dueDate\":\"2026-11-14\",\"responsibleParty\":\"Supplier\"},{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"MSA Contract Non-Renewal Written Notice Window\",\"pageNumber\":12,\"clauseNumber\":\"Section 12.3\",\"evidence\":\"Either party may prevent automatic renewal by providing written non-renewal notice at least 60 days prior.\",\"dueDate\":\"2026-10-05\",\"responsibleParty\":\"Client\"}]",
+          "createdAt": "2026-09-30T15:41:39.209Z"
+        }
+      ]
+    },
+    {
+      "id": "4afc02e4-f763-487a-8cb1-088572b15046",
+      "title": "Show me all high and critical compliance confli...",
+      "createdAt": "2026-09-30T15:41:39.224Z",
+      "updatedAt": "2026-09-30T15:41:39.224Z",
+      "messages": [
+        {
+          "id": "0f38fc8e-de65-4b8c-a3de-266d8d9bff5c",
+          "conversationId": "4afc02e4-f763-487a-8cb1-088572b15046",
+          "role": "user",
+          "content": "Show me all high and critical compliance conflicts.",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:41:39.236Z"
+        },
+        {
+          "id": "b1524c58-c07c-4fd9-84d9-f1fce6d26f5a",
+          "conversationId": "4afc02e4-f763-487a-8cb1-088572b15046",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"title\":\"Data Encryption & Security Standard\",\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\"}]",
+          "createdAt": "2026-09-30T15:41:39.254Z"
+        }
+      ]
+    },
+    {
+      "id": "c9ebe9e2-e6fb-4566-ae83-19f5fd98fde5",
+      "title": "What corporate policies exist for security and ...",
+      "createdAt": "2026-09-30T15:41:39.266Z",
+      "updatedAt": "2026-09-30T15:41:39.266Z",
+      "messages": [
+        {
+          "id": "e41c2851-d32b-4bac-8361-8b05041e57a7",
+          "conversationId": "c9ebe9e2-e6fb-4566-ae83-19f5fd98fde5",
+          "role": "user",
+          "content": "What corporate policies exist for security and data retention?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:41:39.279Z"
+        },
+        {
+          "id": "0ba5a181-51f6-40f8-9b07-da02229349f6",
+          "conversationId": "c9ebe9e2-e6fb-4566-ae83-19f5fd98fde5",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"title\":\"Data Encryption & Security Standard\",\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\"}]",
+          "createdAt": "2026-09-30T15:41:39.295Z"
+        }
+      ]
+    },
+    {
+      "id": "0807b8d5-8b04-403a-95c4-a5687bfe8a0f",
+      "title": "What is the secret quantum encryption key for M...",
+      "createdAt": "2026-09-30T15:41:39.307Z",
+      "updatedAt": "2026-09-30T15:41:39.307Z",
+      "messages": [
+        {
+          "id": "ad65a864-0f9d-44b3-aeda-07451f78a727",
+          "conversationId": "0807b8d5-8b04-403a-95c4-a5687bfe8a0f",
+          "role": "user",
+          "content": "What is the secret quantum encryption key for Mars Rover launch in 2099?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:41:39.316Z"
+        },
+        {
+          "id": "97c006d3-99bc-46e2-821e-25fa3926669b",
+          "conversationId": "0807b8d5-8b04-403a-95c4-a5687bfe8a0f",
+          "role": "assistant",
+          "content": "I couldn't find sufficient information in the available contract and policy data.",
+          "confidence": 0,
+          "needsReview": true,
+          "sourcesJson": "[]",
+          "createdAt": "2026-09-30T15:41:39.329Z"
+        }
+      ]
+    },
+    {
+      "id": "849053b2-0895-4d22-9a3c-af87b9c43498",
+      "title": "Who is responsible for upcoming deadlines?",
+      "createdAt": "2026-09-30T15:41:39.340Z",
+      "updatedAt": "2026-09-30T15:41:39.340Z",
+      "messages": [
+        {
+          "id": "d178346a-9c47-489c-ae78-4557fa69a23c",
+          "conversationId": "849053b2-0895-4d22-9a3c-af87b9c43498",
+          "role": "user",
+          "content": "Who is responsible for upcoming deadlines?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:41:39.353Z"
+        },
+        {
+          "id": "ed425259-d065-4631-9972-9607c18ed894",
+          "conversationId": "849053b2-0895-4d22-9a3c-af87b9c43498",
+          "role": "assistant",
+          "content": "There are 1 deadline(s) recorded in your active contracts. Here are the most imminent:\n\n1. **Annual Cyber Risk Assessment Audit** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-11-14\n• **Notice Required**: 30 days\n• **Responsible**: Supplier\n• **Status**: UPCOMING",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"Annual Cyber Risk Assessment Audit\",\"pageNumber\":5,\"clauseNumber\":\"Section 5.4\",\"evidence\":\"Supplier shall undergo an Annual Cyber Risk Assessment Audit within 45 days of fiscal year start.\",\"dueDate\":\"2026-11-14\",\"responsibleParty\":\"Supplier\"}]",
+          "createdAt": "2026-09-30T15:41:39.388Z"
+        },
+        {
+          "id": "05de10b8-a25b-43b8-8708-d56991ea3515",
+          "conversationId": "849053b2-0895-4d22-9a3c-af87b9c43498",
+          "role": "user",
+          "content": "Which contract clauses conflict with company policies?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:41:39.406Z"
+        },
+        {
+          "id": "bcb802a4-71d4-40ef-9d1c-4e279e84d414",
+          "conversationId": "849053b2-0895-4d22-9a3c-af87b9c43498",
+          "role": "assistant",
+          "content": "I couldn't find sufficient information in the available contract and policy data.",
+          "confidence": 0,
+          "needsReview": true,
+          "sourcesJson": "[]",
+          "createdAt": "2026-09-30T15:41:39.435Z"
+        }
+      ]
+    },
+    {
+      "id": "81d6e6bb-70ef-466c-af9f-6e2e02e3f572",
+      "title": "What notice periods are required?",
+      "createdAt": "2026-09-30T15:41:39.443Z",
+      "updatedAt": "2026-09-30T15:41:39.443Z",
+      "messages": [
+        {
+          "id": "1f5a052b-3707-422b-9c74-f23184c6e99a",
+          "conversationId": "81d6e6bb-70ef-466c-af9f-6e2e02e3f572",
+          "role": "user",
+          "content": "What notice periods are required?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T15:41:39.451Z"
+        },
+        {
+          "id": "2e7cdb31-4fea-4a65-8b14-0945af1b365a",
+          "conversationId": "81d6e6bb-70ef-466c-af9f-6e2e02e3f572",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-NOT-001] Contract Renewal & Termination Notice Window** (v1.2):\n\nAgreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"title\":\"Contract Renewal & Termination Notice Window\",\"evidence\":\"Agreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.\",\"policyName\":\"Contract Renewal & Termination Notice Window\",\"policyVersion\":\"1.2\",\"policyRequirement\":\"Agreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.\"}]",
+          "createdAt": "2026-09-30T15:41:39.466Z"
+        }
+      ]
+    },
+    {
+      "id": "e3ce7de8-024e-43cd-a715-bcc9b7561aa7",
+      "title": "What are the most important obligations in my c...",
+      "createdAt": "2026-09-30T16:34:23.343Z",
+      "updatedAt": "2026-09-30T16:34:23.343Z",
+      "messages": [
+        {
+          "id": "7b2ec760-1649-4600-81fe-cc360d915609",
+          "conversationId": "e3ce7de8-024e-43cd-a715-bcc9b7561aa7",
+          "role": "user",
+          "content": "What are the most important obligations in my contracts?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T16:34:23.352Z"
+        },
+        {
+          "id": "4c845658-96f9-4651-9ca5-72a9c0f7acf7",
+          "conversationId": "e3ce7de8-024e-43cd-a715-bcc9b7561aa7",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"contractId\":null,\"contractTitle\":null,\"title\":\"Data Encryption & Security Standard\",\"pageNumber\":null,\"clauseNumber\":null,\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"dueDate\":null,\"responsibleParty\":null}]",
+          "createdAt": "2026-09-30T16:34:23.378Z"
+        }
+      ]
+    },
+    {
+      "id": "8e41c3e4-0e16-4d0c-aeb1-e3adf6002736",
+      "title": "Summarize obligations across all uploaded contr...",
+      "createdAt": "2026-09-30T16:34:23.386Z",
+      "updatedAt": "2026-09-30T16:34:23.386Z",
+      "messages": [
+        {
+          "id": "386c691a-0967-49d4-8c16-e412ace1d6b6",
+          "conversationId": "8e41c3e4-0e16-4d0c-aeb1-e3adf6002736",
+          "role": "user",
+          "content": "Summarize obligations across all uploaded contracts.",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T16:34:23.393Z"
+        },
+        {
+          "id": "7ddaa351-b5b2-4398-86d2-b4112c92f58a",
+          "conversationId": "8e41c3e4-0e16-4d0c-aeb1-e3adf6002736",
+          "role": "assistant",
+          "content": "### Contract Intelligence Summary: **Master Cloud & SaaS Services Agreement 2026**\n\n• **Purpose / Status**: ANALYZED (Ingested 14 page(s))\n• **Key Obligations Extracted**: 0 obligation(s)\n• **Deadlines & Milestones**: 0 deadline(s)\n• **Policy Conflicts Detected**: 0 conflict(s)\n\nNo specific obligations extracted yet.",
+          "confidence": 0.92,
+          "needsReview": false,
+          "sourcesJson": "[]",
+          "createdAt": "2026-09-30T16:34:23.407Z"
+        }
+      ]
+    },
+    {
+      "id": "81af4d93-d6a2-4681-b0ad-26ad44cc4e3b",
+      "title": "Which deadlines are coming up soon?",
+      "createdAt": "2026-09-30T16:34:23.415Z",
+      "updatedAt": "2026-09-30T16:34:23.415Z",
+      "messages": [
+        {
+          "id": "2d362dd4-ed1b-4421-9d5d-108584f537ac",
+          "conversationId": "81af4d93-d6a2-4681-b0ad-26ad44cc4e3b",
+          "role": "user",
+          "content": "Which deadlines are coming up soon?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T16:34:23.421Z"
+        },
+        {
+          "id": "aa819940-88d0-4be9-a934-df98923fef77",
+          "conversationId": "81af4d93-d6a2-4681-b0ad-26ad44cc4e3b",
+          "role": "assistant",
+          "content": "There are 2 deadline(s) recorded in your active contracts. Here are the most imminent:\n\n1. **Annual Cyber Risk Assessment Audit** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-11-14\n• **Notice Required**: 30 days\n• **Responsible**: Supplier\n• **Status**: UPCOMING\n\n2. **MSA Contract Non-Renewal Written Notice Window** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-10-05\n• **Notice Required**: 60 days\n• **Responsible**: Client\n• **Status**: DUE_SOON",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"Annual Cyber Risk Assessment Audit\",\"pageNumber\":5,\"clauseNumber\":\"Section 5.4\",\"evidence\":\"Supplier shall undergo an Annual Cyber Risk Assessment Audit within 45 days of fiscal year start.\",\"policyName\":null,\"policyVersion\":null,\"policyRequirement\":null,\"dueDate\":\"2026-11-14\",\"responsibleParty\":\"Supplier\"},{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"MSA Contract Non-Renewal Written Notice Window\",\"pageNumber\":12,\"clauseNumber\":\"Section 12.3\",\"evidence\":\"Either party may prevent automatic renewal by providing written non-renewal notice at least 60 days prior.\",\"policyName\":null,\"policyVersion\":null,\"policyRequirement\":null,\"dueDate\":\"2026-10-05\",\"responsibleParty\":\"Client\"}]",
+          "createdAt": "2026-09-30T16:34:23.442Z"
+        }
+      ]
+    },
+    {
+      "id": "0d5d4528-8b53-4430-b919-64a7515c463c",
+      "title": "Show me all high and critical compliance confli...",
+      "createdAt": "2026-09-30T16:34:23.451Z",
+      "updatedAt": "2026-09-30T16:34:23.451Z",
+      "messages": [
+        {
+          "id": "a8e9e74e-6da1-48bf-9475-faffdd9dfb53",
+          "conversationId": "0d5d4528-8b53-4430-b919-64a7515c463c",
+          "role": "user",
+          "content": "Show me all high and critical compliance conflicts.",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T16:34:23.457Z"
+        },
+        {
+          "id": "dbb6fe7c-9684-4779-aaab-5aa03c4fa8b7",
+          "conversationId": "0d5d4528-8b53-4430-b919-64a7515c463c",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"contractId\":null,\"contractTitle\":null,\"title\":\"Data Encryption & Security Standard\",\"pageNumber\":null,\"clauseNumber\":null,\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"dueDate\":null,\"responsibleParty\":null}]",
+          "createdAt": "2026-09-30T16:34:23.467Z"
+        }
+      ]
+    },
+    {
+      "id": "b5eb7eaa-af04-41ba-806d-cfed9a48c193",
+      "title": "What corporate policies exist for security and ...",
+      "createdAt": "2026-09-30T16:34:23.475Z",
+      "updatedAt": "2026-09-30T16:34:23.475Z",
+      "messages": [
+        {
+          "id": "d86d643c-e610-46f1-a17b-76cd536d2330",
+          "conversationId": "b5eb7eaa-af04-41ba-806d-cfed9a48c193",
+          "role": "user",
+          "content": "What corporate policies exist for security and data retention?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T16:34:23.481Z"
+        },
+        {
+          "id": "b23c523e-b2a6-4437-a3d1-7e7fc7f5f8c5",
+          "conversationId": "b5eb7eaa-af04-41ba-806d-cfed9a48c193",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"contractId\":null,\"contractTitle\":null,\"title\":\"Data Encryption & Security Standard\",\"pageNumber\":null,\"clauseNumber\":null,\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"dueDate\":null,\"responsibleParty\":null}]",
+          "createdAt": "2026-09-30T16:34:23.491Z"
+        }
+      ]
+    },
+    {
+      "id": "6553a442-926e-4cab-9132-1b06121390d5",
+      "title": "What is the secret quantum encryption key for M...",
+      "createdAt": "2026-09-30T16:34:23.499Z",
+      "updatedAt": "2026-09-30T16:34:23.499Z",
+      "messages": [
+        {
+          "id": "c49843d5-490e-4cbc-9614-dfebe15c245d",
+          "conversationId": "6553a442-926e-4cab-9132-1b06121390d5",
+          "role": "user",
+          "content": "What is the secret quantum encryption key for Mars Rover launch in 2099?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T16:34:23.504Z"
+        },
+        {
+          "id": "f0c2b5d6-319c-4e71-9b18-c2b00108e30b",
+          "conversationId": "6553a442-926e-4cab-9132-1b06121390d5",
+          "role": "assistant",
+          "content": "I couldn't find sufficient information in the available contract and policy data.",
+          "confidence": 0,
+          "needsReview": true,
+          "sourcesJson": "[]",
+          "createdAt": "2026-09-30T16:34:23.513Z"
+        }
+      ]
+    },
+    {
+      "id": "5feef8a3-e37c-4cdb-b24a-dd9064a792ef",
+      "title": "Who is responsible for upcoming deadlines?",
+      "createdAt": "2026-09-30T16:34:23.523Z",
+      "updatedAt": "2026-09-30T16:34:23.523Z",
+      "messages": [
+        {
+          "id": "d688a6b7-1cfe-414a-9277-eba07fa46e1b",
+          "conversationId": "5feef8a3-e37c-4cdb-b24a-dd9064a792ef",
+          "role": "user",
+          "content": "Who is responsible for upcoming deadlines?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T16:34:23.530Z"
+        },
+        {
+          "id": "bedd9fa5-57d9-4e95-b938-eefb7289d171",
+          "conversationId": "5feef8a3-e37c-4cdb-b24a-dd9064a792ef",
+          "role": "assistant",
+          "content": "There are 1 deadline(s) recorded in your active contracts. Here are the most imminent:\n\n1. **Annual Cyber Risk Assessment Audit** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-11-14\n• **Notice Required**: 30 days\n• **Responsible**: Supplier\n• **Status**: UPCOMING",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"Annual Cyber Risk Assessment Audit\",\"pageNumber\":5,\"clauseNumber\":\"Section 5.4\",\"evidence\":\"Supplier shall undergo an Annual Cyber Risk Assessment Audit within 45 days of fiscal year start.\",\"policyName\":null,\"policyVersion\":null,\"policyRequirement\":null,\"dueDate\":\"2026-11-14\",\"responsibleParty\":\"Supplier\"}]",
+          "createdAt": "2026-09-30T16:34:23.556Z"
+        },
+        {
+          "id": "1c3e23be-6cbb-4417-8e64-19a014b6ab06",
+          "conversationId": "5feef8a3-e37c-4cdb-b24a-dd9064a792ef",
+          "role": "user",
+          "content": "Which contract clauses conflict with company policies?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T16:34:23.566Z"
+        },
+        {
+          "id": "650b62b4-13fa-4206-addb-4b086828c310",
+          "conversationId": "5feef8a3-e37c-4cdb-b24a-dd9064a792ef",
+          "role": "assistant",
+          "content": "I couldn't find sufficient information in the available contract and policy data.",
+          "confidence": 0,
+          "needsReview": true,
+          "sourcesJson": "[]",
+          "createdAt": "2026-09-30T16:34:23.576Z"
+        }
+      ]
+    },
+    {
+      "id": "3548c760-91dc-4c9b-aa2d-c2bb7e3bb112",
+      "title": "What notice periods are required?",
+      "createdAt": "2026-09-30T16:34:23.584Z",
+      "updatedAt": "2026-09-30T16:34:23.584Z",
+      "messages": [
+        {
+          "id": "c85ea9ee-6621-409c-83c6-fe08675c723c",
+          "conversationId": "3548c760-91dc-4c9b-aa2d-c2bb7e3bb112",
+          "role": "user",
+          "content": "What notice periods are required?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-09-30T16:34:23.590Z"
+        },
+        {
+          "id": "67c263bb-df7c-48ed-baac-90a4f2fbea28",
+          "conversationId": "3548c760-91dc-4c9b-aa2d-c2bb7e3bb112",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-NOT-001] Contract Renewal & Termination Notice Window** (v1.2):\n\nAgreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"contractId\":null,\"contractTitle\":null,\"title\":\"Contract Renewal & Termination Notice Window\",\"pageNumber\":null,\"clauseNumber\":null,\"evidence\":\"Agreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.\",\"policyName\":\"Contract Renewal & Termination Notice Window\",\"policyVersion\":\"1.2\",\"policyRequirement\":\"Agreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.\",\"dueDate\":null,\"responsibleParty\":null}]",
+          "createdAt": "2026-09-30T16:34:23.601Z"
+        }
+      ]
+    },
+    {
+      "id": "7f8a01b2-87aa-42e4-923b-b98fe6a9e90a",
+      "title": "What are the most important obligations in my c...",
+      "createdAt": "2026-10-23T16:51:39.261Z",
+      "updatedAt": "2026-10-23T16:51:39.261Z",
+      "messages": [
+        {
+          "id": "1c1d609e-fe89-4ad7-bfcb-7c8a1383874a",
+          "conversationId": "7f8a01b2-87aa-42e4-923b-b98fe6a9e90a",
+          "role": "user",
+          "content": "What are the most important obligations in my contracts?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-10-23T16:51:39.287Z"
+        },
+        {
+          "id": "ebd94d60-498d-4de0-b4cd-c39ee9341587",
+          "conversationId": "7f8a01b2-87aa-42e4-923b-b98fe6a9e90a",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"contractId\":null,\"contractTitle\":null,\"title\":\"Data Encryption & Security Standard\",\"pageNumber\":null,\"clauseNumber\":null,\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"dueDate\":null,\"responsibleParty\":null}]",
+          "createdAt": "2026-10-23T16:51:40.302Z"
+        }
+      ]
+    },
+    {
+      "id": "c8ebb735-533f-4f27-92c1-d819a3740b8f",
+      "title": "Summarize obligations across all uploaded contr...",
+      "createdAt": "2026-10-23T16:51:40.326Z",
+      "updatedAt": "2026-10-23T16:51:40.326Z",
+      "messages": [
+        {
+          "id": "385fd816-35bd-435c-ba68-f6b2e17a352a",
+          "conversationId": "c8ebb735-533f-4f27-92c1-d819a3740b8f",
+          "role": "user",
+          "content": "Summarize obligations across all uploaded contracts.",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-10-23T16:51:40.346Z"
+        },
+        {
+          "id": "d9ca0b6d-4445-4ceb-8124-5c36c5b398cb",
+          "conversationId": "c8ebb735-533f-4f27-92c1-d819a3740b8f",
+          "role": "assistant",
+          "content": "### Contract Intelligence Summary: **Master Cloud & SaaS Services Agreement 2026**\n\n• **Purpose / Status**: ANALYZED (Ingested 14 page(s))\n• **Key Obligations Extracted**: 0 obligation(s)\n• **Deadlines & Milestones**: 0 deadline(s)\n• **Policy Conflicts Detected**: 0 conflict(s)\n\nNo specific obligations extracted yet.",
+          "confidence": 0.92,
+          "needsReview": false,
+          "sourcesJson": "[]",
+          "createdAt": "2026-10-23T16:51:40.800Z"
+        }
+      ]
+    },
+    {
+      "id": "a2e2e278-09b1-43ed-a015-24807be15574",
+      "title": "Which deadlines are coming up soon?",
+      "createdAt": "2026-10-23T16:51:40.817Z",
+      "updatedAt": "2026-10-23T16:51:40.817Z",
+      "messages": [
+        {
+          "id": "e94f5660-d58e-48a2-ae4c-f9e3fce60b17",
+          "conversationId": "a2e2e278-09b1-43ed-a015-24807be15574",
+          "role": "user",
+          "content": "Which deadlines are coming up soon?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-10-23T16:51:40.831Z"
+        },
+        {
+          "id": "ea32b9f1-9bb5-4176-9878-b1ea442c0882",
+          "conversationId": "a2e2e278-09b1-43ed-a015-24807be15574",
+          "role": "assistant",
+          "content": "There are 2 deadline(s) recorded in your active contracts. Here are the most imminent:\n\n1. **Annual Cyber Risk Assessment Audit** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-11-14\n• **Notice Required**: 30 days\n• **Responsible**: Supplier\n• **Status**: UPCOMING\n\n2. **MSA Contract Non-Renewal Written Notice Window** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-10-05\n• **Notice Required**: 60 days\n• **Responsible**: Client\n• **Status**: DUE_SOON",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"Annual Cyber Risk Assessment Audit\",\"pageNumber\":5,\"clauseNumber\":\"Section 5.4\",\"evidence\":\"Supplier shall undergo an Annual Cyber Risk Assessment Audit within 45 days of fiscal year start.\",\"policyName\":null,\"policyVersion\":null,\"policyRequirement\":null,\"dueDate\":\"2026-11-14\",\"responsibleParty\":\"Supplier\"},{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"MSA Contract Non-Renewal Written Notice Window\",\"pageNumber\":12,\"clauseNumber\":\"Section 12.3\",\"evidence\":\"Either party may prevent automatic renewal by providing written non-renewal notice at least 60 days prior.\",\"policyName\":null,\"policyVersion\":null,\"policyRequirement\":null,\"dueDate\":\"2026-10-05\",\"responsibleParty\":\"Client\"}]",
+          "createdAt": "2026-10-23T16:51:41.206Z"
+        }
+      ]
+    },
+    {
+      "id": "cafe8a80-6eb1-448f-8c3b-f47481b24712",
+      "title": "Show me all high and critical compliance confli...",
+      "createdAt": "2026-10-23T16:51:41.225Z",
+      "updatedAt": "2026-10-23T16:51:41.225Z",
+      "messages": [
+        {
+          "id": "e409b521-efdf-4e65-a024-1267ed3c442f",
+          "conversationId": "cafe8a80-6eb1-448f-8c3b-f47481b24712",
+          "role": "user",
+          "content": "Show me all high and critical compliance conflicts.",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-10-23T16:51:41.242Z"
+        },
+        {
+          "id": "5a0f0be9-589b-4330-9cf7-571c492331cc",
+          "conversationId": "cafe8a80-6eb1-448f-8c3b-f47481b24712",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"contractId\":null,\"contractTitle\":null,\"title\":\"Data Encryption & Security Standard\",\"pageNumber\":null,\"clauseNumber\":null,\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"dueDate\":null,\"responsibleParty\":null}]",
+          "createdAt": "2026-10-23T16:51:41.619Z"
+        }
+      ]
+    },
+    {
+      "id": "ab2bfa97-626f-47d6-a307-ff4f4a9421c7",
+      "title": "What corporate policies exist for security and ...",
+      "createdAt": "2026-10-23T16:51:41.641Z",
+      "updatedAt": "2026-10-23T16:51:41.641Z",
+      "messages": [
+        {
+          "id": "444b0ee3-fe11-4ff3-b378-81ba3c417616",
+          "conversationId": "ab2bfa97-626f-47d6-a307-ff4f4a9421c7",
+          "role": "user",
+          "content": "What corporate policies exist for security and data retention?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-10-23T16:51:41.658Z"
+        },
+        {
+          "id": "bf6ddc6f-f776-4936-9cce-62d871fe5721",
+          "conversationId": "ab2bfa97-626f-47d6-a307-ff4f4a9421c7",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-SEC-001] Data Encryption & Security Standard** (v1.5):\n\nAll confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"contractId\":null,\"contractTitle\":null,\"title\":\"Data Encryption & Security Standard\",\"pageNumber\":null,\"clauseNumber\":null,\"evidence\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"policyName\":\"Data Encryption & Security Standard\",\"policyVersion\":\"1.5\",\"policyRequirement\":\"All confidential customer records and PII must be encrypted using AES-256 at rest and TLS 1.3 in transit. Multi-Factor Authentication (MFA) must be enforced for administrative access.\",\"dueDate\":null,\"responsibleParty\":null}]",
+          "createdAt": "2026-10-23T16:51:42.217Z"
+        }
+      ]
+    },
+    {
+      "id": "8ab37b00-10f1-4641-a6e9-a3ecfc109a34",
+      "title": "What is the secret quantum encryption key for M...",
+      "createdAt": "2026-10-23T16:51:42.240Z",
+      "updatedAt": "2026-10-23T16:51:42.240Z",
+      "messages": [
+        {
+          "id": "f26e017b-a739-4a00-9e9c-364a7659396f",
+          "conversationId": "8ab37b00-10f1-4641-a6e9-a3ecfc109a34",
+          "role": "user",
+          "content": "What is the secret quantum encryption key for Mars Rover launch in 2099?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-10-23T16:51:42.254Z"
+        },
+        {
+          "id": "f9970c83-368d-4294-8a6a-88a96d21a11d",
+          "conversationId": "8ab37b00-10f1-4641-a6e9-a3ecfc109a34",
+          "role": "assistant",
+          "content": "I couldn't find sufficient information in the available contract and policy data.",
+          "confidence": 0,
+          "needsReview": true,
+          "sourcesJson": "[]",
+          "createdAt": "2026-10-23T16:51:42.299Z"
+        }
+      ]
+    },
+    {
+      "id": "2292af48-dd55-4e3d-8b20-d350cd9d1342",
+      "title": "Who is responsible for upcoming deadlines?",
+      "createdAt": "2026-10-23T16:51:42.320Z",
+      "updatedAt": "2026-10-23T16:51:42.320Z",
+      "messages": [
+        {
+          "id": "22570435-ce21-4c05-a0a1-3492e518afb5",
+          "conversationId": "2292af48-dd55-4e3d-8b20-d350cd9d1342",
+          "role": "user",
+          "content": "Who is responsible for upcoming deadlines?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-10-23T16:51:42.342Z"
+        },
+        {
+          "id": "2b243791-8c77-41c4-ae4a-68b29cc8cad8",
+          "conversationId": "2292af48-dd55-4e3d-8b20-d350cd9d1342",
+          "role": "assistant",
+          "content": "There are 1 deadline(s) recorded in your active contracts. Here are the most imminent:\n\n1. **Annual Cyber Risk Assessment Audit** (Master Cloud & SaaS Services Agreement 2026)\n• **Due Date**: 2026-11-14\n• **Notice Required**: 30 days\n• **Responsible**: Supplier\n• **Status**: UPCOMING",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"deadline\",\"contractId\":\"8adaf140-4f00-4932-9a1e-b6fbdaceae6b\",\"contractTitle\":\"Master Cloud & SaaS Services Agreement 2026\",\"title\":\"Annual Cyber Risk Assessment Audit\",\"pageNumber\":5,\"clauseNumber\":\"Section 5.4\",\"evidence\":\"Supplier shall undergo an Annual Cyber Risk Assessment Audit within 45 days of fiscal year start.\",\"policyName\":null,\"policyVersion\":null,\"policyRequirement\":null,\"dueDate\":\"2026-11-14\",\"responsibleParty\":\"Supplier\"}]",
+          "createdAt": "2026-10-23T16:51:42.742Z"
+        },
+        {
+          "id": "bd65c72f-c3ab-4ae4-ba8c-9fe7db28d5b6",
+          "conversationId": "2292af48-dd55-4e3d-8b20-d350cd9d1342",
+          "role": "user",
+          "content": "Which contract clauses conflict with company policies?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-10-23T16:51:42.780Z"
+        },
+        {
+          "id": "405d6dde-45e7-4208-be1b-f8043e54765e",
+          "conversationId": "2292af48-dd55-4e3d-8b20-d350cd9d1342",
+          "role": "assistant",
+          "content": "I couldn't find sufficient information in the available contract and policy data.",
+          "confidence": 0,
+          "needsReview": true,
+          "sourcesJson": "[]",
+          "createdAt": "2026-10-23T16:51:43.307Z"
+        }
+      ]
+    },
+    {
+      "id": "0a21b985-c527-404b-bdbd-d521a329bc0f",
+      "title": "What notice periods are required?",
+      "createdAt": "2026-10-23T16:51:43.332Z",
+      "updatedAt": "2026-10-23T16:51:43.332Z",
+      "messages": [
+        {
+          "id": "c2fe484d-b851-4425-b5e7-69eed37305d0",
+          "conversationId": "0a21b985-c527-404b-bdbd-d521a329bc0f",
+          "role": "user",
+          "content": "What notice periods are required?",
+          "confidence": null,
+          "needsReview": false,
+          "sourcesJson": null,
+          "createdAt": "2026-10-23T16:51:43.354Z"
+        },
+        {
+          "id": "762dfd36-4afc-4058-9052-3e82935d94cb",
+          "conversationId": "0a21b985-c527-404b-bdbd-d521a329bc0f",
+          "role": "assistant",
+          "content": "Corporate Policy **[POL-NOT-001] Contract Renewal & Termination Notice Window** (v1.2):\n\nAgreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.",
+          "confidence": 0.95,
+          "needsReview": false,
+          "sourcesJson": "[{\"type\":\"policy\",\"contractId\":null,\"contractTitle\":null,\"title\":\"Contract Renewal & Termination Notice Window\",\"pageNumber\":null,\"clauseNumber\":null,\"evidence\":\"Agreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.\",\"policyName\":\"Contract Renewal & Termination Notice Window\",\"policyVersion\":\"1.2\",\"policyRequirement\":\"Agreement termination or non-renewal notices must be submitted in writing at least 60 days prior to the expiration of the active term to prevent automatic renewal.\",\"dueDate\":null,\"responsibleParty\":null}]",
+          "createdAt": "2026-10-23T16:51:43.734Z"
+        }
+      ]
+    }
+  ]
+}
